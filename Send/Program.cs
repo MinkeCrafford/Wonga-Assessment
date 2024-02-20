@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Text;
+using RabbitMQ.Client;
+
+// Create Connection to RabbitMQ service
+var factory = new ConnectionFactory { HostName = "localhost"};
+using var connection = factory.CreateConnection();
+using var channel = connection.CreateModel();
