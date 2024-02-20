@@ -18,3 +18,10 @@ Console.WriteLine("Enter your name:");
 
 // Store input from user 
 var name = Console.ReadLine();
+
+// Create message string with input from name string 
+string message = $"Hello my name is, {name}";
+
+//Print string
+Console.WriteLine(message);
+
