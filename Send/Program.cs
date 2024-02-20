@@ -12,3 +12,9 @@ channel.QueueDeclare(queue: "nameQueue",
                     exclusive: false,
                     autoDelete: false,
                     arguments: null);
+
+// Print to console
+Console.WriteLine("Enter your name:");
+
+// Store input from user 
+var name = Console.ReadLine();
