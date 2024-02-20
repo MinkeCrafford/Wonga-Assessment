@@ -68,7 +68,13 @@ Promt user to exit program when done
 #         Sources Used         #
 --------------------------------
 
+# Links to Websites/Youtube Videos
+
 https://rabbitmq.com/tutorials/tutorial-one-dotnet.html
 https://youtube.com/playlist?list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO&si=5FHEyvISSf2UC2Y3
+https://medium.com/@nikitinsn6/a-beginners-guide-to-rabbitmq-and-how-to-use-it-in-net-446662e53ea2
+
+# Downloads
+
 https://rabbitmq.com/install-windows.html#installer
 https://www.erlang.org/downloads
