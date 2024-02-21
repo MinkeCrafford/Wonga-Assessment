@@ -25,3 +25,11 @@ string message = $"Hello my name is, {name}";
 //Print string
 Console.WriteLine(message);
 
+//Encode message 
+var encodedMessage = Encoding.UTF8.GetBytes(name);
+
+//Send message to receiver 
+channel.BasicPublish("",
+                    "nameQueue", 
+                    null, 
+                    encodedMessage);

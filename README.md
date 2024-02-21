@@ -50,7 +50,7 @@ Declare message queue
         Prompt user for input
     Print out "Hello my name is, " with user input after
         Encode the message (string to bytes) in UTF8 format
-Send message to Receiver
+Send message to Receiver (publish)
 Promt user to exit program when done 
 
 
