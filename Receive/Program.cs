@@ -1,7 +1,7 @@
 ﻿// Added library
-using System.Text;
-using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
+using System.Text; // Library for encoding and decoding text
+using RabbitMQ.Client; // Library for interacting with RabbitMQ
+using RabbitMQ.Client.Events; // Library to access classes related to RabbitMQ consumer events.
 
 // Create connection factory to connect to RabbitMQ service
 var factory = new ConnectionFactory { HostName = "localhost"};
