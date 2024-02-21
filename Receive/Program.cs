@@ -25,3 +25,7 @@ consumer.Received += (model, ea) =>
         Console.WriteLine(response); // Prints response
     };
 
+// Consume message when done (clear)
+channel.BasicConsume(queue: "nameQueue",
+                            autoAck: true,
+                            consumer: consumer);
