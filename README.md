@@ -73,8 +73,11 @@ Promt user to exit program when done
 https://rabbitmq.com/tutorials/tutorial-one-dotnet.html
 https://youtube.com/playlist?list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO&si=5FHEyvISSf2UC2Y3
 https://medium.com/@nikitinsn6/a-beginners-guide-to-rabbitmq-and-how-to-use-it-in-net-446662e53ea2
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/nullable-warnings#possible-null-assigned-to-a-nonnullable-reference
 
 # Downloads
 
 https://rabbitmq.com/install-windows.html#installer
 https://www.erlang.org/downloads
+
+
