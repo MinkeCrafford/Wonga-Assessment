@@ -1,10 +1,15 @@
-﻿using System.Text;
+﻿// Added library
+using System.Text;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-// Create Connection to RabbitMQ service
+// Create connection factory to connect to RabbitMQ service
 var factory = new ConnectionFactory { HostName = "localhost"};
+
+// Establish a connection to the RabbitMQ service
 using var connection = factory.CreateConnection();
+
+// Create a channel, which is used for communication with RabbitMQ
 using var channel = connection.CreateModel();
 
 // Declare a message queue
@@ -14,18 +19,22 @@ channel.QueueDeclare(queue: "nameQueue",
                     autoDelete: false,
                     arguments: null);
 
-// Create consumer, subscribing to receive event
+// Create consumer for receiving messages from the queue
 var consumer = new EventingBasicConsumer(channel);
+
+// Define an event handler for processing received messages
 consumer.Received += (model, ea) =>
     {
+        // Extract the message & Decode message (byte to string)
         var encodedMessage = ea.Body.ToArray();
-        var name = Encoding.UTF8.GetString(encodedMessage); // Decode message (byte to string)
+        var name = Encoding.UTF8.GetString(encodedMessage); 
 
-        string response = $"Hello {name}, I am your father!"; // Adds decoded message to string response
-        Console.WriteLine(response); // Prints response
+        // Takes received message and adds it to string response
+        string response = $"Hello {name}, I am your father!"; 
+        Console.WriteLine(response); // Prints message (response)
     };
 
-// Consume message when done (clear)
+// Consume message from the queue (nameQueue)
 channel.BasicConsume(queue: "nameQueue",
-                            autoAck: true,
+                            autoAck: true, // AutoAck is set to true, which means messages are automatically acknowledged once received
                             consumer: consumer);
