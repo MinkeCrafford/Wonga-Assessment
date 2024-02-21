@@ -26,7 +26,7 @@ string message = $"Hello my name is, {name}";
 Console.WriteLine(message);
 
 //Encode message 
-var encodedMessage = Encoding.UTF8.GetBytes(name);
+var encodedMessage = Encoding.UTF8.GetBytes(name!); // The '!' is a null forgiving operator 
 
 //Send message to receiver 
 channel.BasicPublish("",
